@@ -1,8 +1,11 @@
 import HomePageHead from '@/components/HomePageHead/HomePageHead';
 import React from 'react';
+import styles from '@/styles/mainpage.module.scss';
 
 export default function MainPage() {
   return (
-    <HomePageHead />
+    <main className={styles.container}>
+      <HomePageHead />
+    </main>
   );
 }
