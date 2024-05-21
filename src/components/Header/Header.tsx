@@ -1,10 +1,11 @@
 import React from 'react';
+import UpperHeader from '../UpperHeader/UpperHeader';
+
 
 const Header = () => {
     return (
         <header>
-            <div></div>
-            <div></div>
+            <UpperHeader />
         </header>
     )
 }
