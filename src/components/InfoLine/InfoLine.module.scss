@@ -1,0 +1,38 @@
+.container {
+    background-color: #D4E9F9;
+}
+
+.slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.text {
+    font-size: 18px;
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    .left_arrow {
+        position: absolute;
+        left: 250px;
+        top: 15px;
+        height: 24px;
+        width: auto;
+    }
+
+    .right_arrow {
+        position: absolute;
+        right: 250px;
+        top: 15px;
+        height: 24px;
+        width: auto;
+        transform: rotateY(180deg);
+    }
+}
