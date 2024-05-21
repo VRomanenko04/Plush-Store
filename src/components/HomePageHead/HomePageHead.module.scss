@@ -1,0 +1,135 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    background-color: #F7F7F7;
+    height: 500px;
+}
+
+.text_block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    .blur5 {
+        position: absolute;
+        top: -150px;
+        right: -90px;
+        background-color: rgba(152, 224, 194, 0.38);
+        height: 230px;
+        width: 230px;
+        border-radius: 50%;
+        filter: blur(2rem);
+    }
+
+    .blur6 {
+        position: absolute;
+        top: -50px;
+        right: -220px;
+        background-color: rgba(255, 252, 189, 0.45);
+        height: 260px;
+        width: 260px;
+        border-radius: 50%;
+        filter: blur(2rem);
+    }
+
+    .blur7 {
+        position: absolute;
+        top: 150px;
+        right: -140px;
+        background-color: rgba(255, 217, 195, 0.61);
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        filter: blur(2rem);
+    }
+}
+
+.interesting_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 15px;
+
+    .semibold {
+        font-size: 22px;
+    }
+
+    .lined_text {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        font-size: 16px;
+    
+        .line {
+            width: 30px;
+            height: 2px;
+            background-color: #000;
+        }
+    }
+}
+
+.image_block {
+    position: relative; 
+
+    .blur1 {
+        z-index: 1;
+        position: absolute;
+        top: -10px;
+        right: 30px;
+        background-color: rgba(111, 217, 251, 0.6);
+        height: 270px;
+        width: 270px;
+        border-radius: 50%;
+        filter: blur(2.5rem);
+    }
+
+    .blur2 {
+        z-index: 1;
+        position: absolute;
+        top: 50px;
+        left: -60px;
+        background-color: rgba(194, 226, 255, 0.36);
+        height: 280px;
+        width: 280px;
+        border-radius: 50%;
+        filter: blur(2.5rem);
+    }
+
+    .blur3 {
+        z-index: 1;
+        position: absolute;
+        bottom: -30px;
+        right: 50px;
+        background-color: rgba(255, 168, 241, 0.37);
+        width: 275px;
+        height: 275px;
+        border-radius: 50%;
+        filter: blur(2.5rem);
+    }
+
+    .blur4 {
+        z-index: 1;
+        position: absolute;
+        top: 50px;
+        right: 0px;
+        background-color: rgba(200, 222, 255, 0.37);
+        width: 480px;
+        height: 480px;
+        border-radius: 50%;
+        filter: blur(2.5rem);
+    }
+}
+
+.image {
+    position: relative;
+    width: 600px;
+    height: auto;
+    z-index: 2;
+}
