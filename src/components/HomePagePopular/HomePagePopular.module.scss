@@ -1,0 +1,74 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    gap: 40px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.offers_list {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+    .list_item {
+        background-color: #fff;
+        border: 1px rgba(237, 237, 240, 1) solid;
+        border-radius: 5px;
+
+        h6 {
+            font-weight: 500;
+            font-size: 18px;
+            margin: 10px 0 20px 0;
+            margin-left: 15px;
+        }
+
+        .image {
+            width: 370px;
+            height: 330px;
+            object-fit:cover;
+            border-radius: 5px 5px 0 0;
+        }
+    }
+}
+
+.price_block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    border-top: 1px rgba(237, 237, 240, 1) solid;
+
+    .price {
+        padding: 10px 0;
+        width:60%;
+        border-right: 1px rgba(237, 237, 240, 1) solid;
+        font-weight: 600;
+        color: rgba(231, 66, 106, 1);
+    }
+
+    .btn {
+        cursor: pointer;
+        width: 35%;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 600;
+    }
+}
+
+.link_btn {
+    border: 1px solid #4E9DD3;
+    padding: 15px 50px;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+}
