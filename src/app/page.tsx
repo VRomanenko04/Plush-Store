@@ -3,6 +3,7 @@ import React from 'react';
 import styles from '@/styles/mainpage.module.scss';
 import HomePagePopular from '@/components/HomePagePopular/HomePagePopular';
 import HomePageHolidays from '@/components/HomePageHolidays/HomePageHolidays';
+import HomePageAdvantages from '@/components/HomePageAdvantages/HomePageAdvantages';
 
 export default function MainPage() {
   return (
@@ -10,6 +11,7 @@ export default function MainPage() {
       <HomePageHead />
       <HomePagePopular />
       <HomePageHolidays />
+      <HomePageAdvantages />
     </main>
   );
 }
