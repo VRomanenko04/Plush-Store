@@ -1,0 +1,42 @@
+.container {
+    margin-top: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.advantage_list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.advantage {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 320px;
+}
+
+.image {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+}
+
+.advantage_title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.advantage_description {
+    font-size: 14px;
+    color: #292929;
+}
