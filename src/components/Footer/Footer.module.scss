@@ -1,0 +1,118 @@
+.container {
+    background-color: #EBEDEE;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: start;
+    padding: 70px;
+}
+
+.first_column {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    .icons {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+
+        div {
+            width: 140px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            p {
+                text-align: center;
+                font-size: 12px;
+                color: #292929;
+            }
+        }
+    }
+
+    .copyright {
+        color: #292929;
+    }
+
+    .icon {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.second_column,
+.third_column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    h6 {
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .link {
+        text-decoration: none;
+        color: #292929;
+    }
+}
+
+.firth_column {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    .phone_container {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 5px;
+    }
+
+    .number {
+        text-decoration: none;
+        color: #000;
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+
+.social_container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    .icon_btn {
+        height: 50px;
+        width: 50px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .inst_icon,
+    .tg_icon {
+        height: 24px;
+        width: 24px;
+    }
+
+    .tg_icon {
+        margin-right: 3px;
+    }
+}
