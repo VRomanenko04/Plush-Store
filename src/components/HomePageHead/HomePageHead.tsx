@@ -19,12 +19,12 @@ const HomePageHead = () => {
                     <h3 className={styles.semibold} style={{fontWeight: 600}}>PLUSHSHOP</h3>
                     <div className={styles.lined_text}>
                         <div className={styles.line}></div>
-                        <h5 style={{fontWeight: 600}}>since 2020</h5>
+                        <h5>since 2020</h5>
                         <div className={styles.line}></div>
                     </div>
                 </div>
-                <h1 style={{fontSize: 42, fontWeight: 600}}>Справжній плюш</h1>
-                <p style={{fontSize: 18}}>Найкращі трендові плюшеві іграшки на ринку</p>
+                <h1 className={styles.head_title}>Справжній плюш</h1>
+                <p className={styles.head_text}>Найкращі трендові плюшеві іграшки на ринку</p>
                 <div className={styles.blur5}></div>
                 <div className={styles.blur6}></div>
                 <div className={styles.blur7}></div>
