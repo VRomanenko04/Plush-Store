@@ -32,13 +32,13 @@ const HomePagePopular = () => {
             <div className={styles.offers_list}>
                 {offers.map((offer) => (
                     <div key={offer.title} className={styles.list_item}>
-                        <Image className={styles.image} src={offer.image} alt='image'/>
+                        <Image className={styles.image} src={offer.image} alt={offer.title}/>
                         <h6>{offer.title}</h6>
                         <div className={styles.price_block}>
                             <p className={styles.price}>{offer.price} грн</p>
                             <div className={styles.btn}>
                                 <Image src={Bag_icon} alt='bag icon'/>
-                                У корзину
+                                <p>У корзину</p>
                             </div>
                         </div>
                     </div>
