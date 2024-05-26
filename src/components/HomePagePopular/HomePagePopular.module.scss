@@ -17,6 +17,7 @@
     gap: 30px;
 
     .list_item {
+        width: 370px;
         background-color: #fff;
         border: 1px rgba(237, 237, 240, 1) solid;
         border-radius: 5px;
@@ -47,7 +48,7 @@
 
     .price {
         padding: 10px 0;
-        width:60%;
+        width: 60%;
         border-right: 1px rgba(237, 237, 240, 1) solid;
         font-weight: 600;
         color: rgba(231, 66, 106, 1);
@@ -71,4 +72,49 @@
     color: #000;
     font-size: 14px;
     font-weight: 500;
+}
+
+@media screen and (max-width: 780px) {
+    .title {
+        margin-top: 40px;
+        font-size: 24px;
+    }
+
+    .offers_list {
+        flex-direction: column;
+
+        .list_item {
+            width: 320px;
+
+            .image {
+                width: 320px;
+                height: 280px;
+            }
+        }
+    }
+
+    .price_block{
+        .price {
+            width: 90%;
+        }
+
+        .btn {
+            width: 10%;
+        }
+    }
+
+
+    .btn p {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 781px) and (max-width: 1200px) {
+    .offers_list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+    }
 }
