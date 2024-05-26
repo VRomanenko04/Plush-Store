@@ -92,3 +92,72 @@
         transform: rotate(-10deg);
     }
 }
+
+@media screen and (max-width: 700px) {
+    .holidays_block {
+        padding: 0 30px;
+        display: flex;
+        align-items: flex-start;
+
+        .line {
+            width: 270px;
+            margin-top: 130px;
+            margin-left: 250px;
+            transform: rotate(90deg);
+        }
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .holiday2,
+    .holiday5 {
+        display: none;
+    }
+
+    .holiday1 {
+        top: -30px;
+        left: 375px;
+    }
+
+    .holiday3 {
+        top: 90px;
+        left: 375px;
+    }
+
+    .holiday4 {
+        top: 220px;
+        left: 375px;
+    }
+
+    .holiday1,
+    .holiday3,
+    .holiday4 {
+        flex-direction: row;
+        gap: 30px;
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1150px) {
+    .holidays_block {
+        width: 600px;
+
+        .line {
+            width: 600px;
+        }
+    }
+
+    .holiday2,
+    .holiday5 {
+        display: none;
+    }
+
+    .holiday3 {
+        left: 220px;
+    }
+
+    .holiday4 {
+        left: 540px;
+    }
+}
