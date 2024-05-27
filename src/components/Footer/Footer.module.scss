@@ -70,7 +70,7 @@
 .firth_column {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 80px;
 
     .phone_container {
         display: flex;
@@ -114,5 +114,49 @@
 
     .tg_icon {
         margin-right: 3px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 10px;
+    }
+
+    .first_column {
+        align-items: center;
+        gap: 30px;
+
+        .icons {
+            flex-direction: column;
+            gap: 10px;
+
+            div {
+                flex-direction: row;
+                gap: 15px;
+                width: auto;
+            }
+        }
+    }
+
+    .links {
+        display: none;
+    }
+
+    .firth_column {
+        margin-top: 30px;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+    .links {
+        display: none;
+    }
+
+    .first_column {
+        align-items: center;
     }
 }
