@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import styles from './UpperHeader.module.scss';
 import Link from 'next/link';
@@ -6,9 +7,16 @@ import Insta_icon from '@/assets/icons/inst_icon.svg';
 import Local_icon from '@/assets/icons/location_icon.svg';
 import Phone_icon from '@/assets/icons/phone_icon.svg';
 import Bag_icon from '@/assets/icons/bag_icon.svg';
+import { useSelector } from 'react-redux';
+import { RootState } from '@/redux/store';
 
 
 const UpperHeader = () => {
+    const productsList = useSelector((state: RootState) => state.basket);
+    const productsCount = productsList.reduce((accumulator, product) => {
+        return accumulator + product.count;
+    }, 0)
+
     return (
             <div className={styles.first_header}>
             <nav className={styles.first_header_block}>
@@ -35,9 +43,14 @@ const UpperHeader = () => {
                         <a className={styles.link} href='tel:0662916690'><Image className={styles.icon} src={Phone_icon} alt='phone icon'/> 0662916690</a>
                     </li>
                     <li className={styles.list_item}>
-                        <Link className={styles.link} href='**'>
+                        <Link className={`${styles.link} ${styles.basket}`} href='**'>
                             <Image className={styles.icon} src={Bag_icon} alt='bag icon'/>
                             <p>Корзина</p>
+                            {productsCount > 0 && (
+                                <div className={styles.count}>
+                                    <p>{productsCount}</p>
+                                </div>
+                            )}
                         </Link>
                     </li>
                     <li className={styles.list_item}>
@@ -52,3 +65,7 @@ const UpperHeader = () => {
 }
 
 export default UpperHeader
+
+function state(state: unknown): unknown {
+    throw new Error('Function not implemented.');
+}

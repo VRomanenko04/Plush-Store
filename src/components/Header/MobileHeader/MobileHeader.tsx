@@ -10,10 +10,17 @@ import Phone_icon from '@/assets/icons/phone_icon.svg';
 import Local_icon from '@/assets/icons/location_icon.svg';
 import InstaIcon from '@/assets/icons/inst_icon.svg';
 import TgIcon from '@/assets/icons/tg_icon.svg';
+import { useSelector } from 'react-redux';
+import { RootState } from '@/redux/store';
 
 
 const MobileHeader = () => {
     const [isOpen, setIsOpen] = useState(false);
+
+    const productsList = useSelector((state: RootState) => state.basket);
+    const productsCount = productsList.reduce((accumulator, product) => {
+        return accumulator + product.count;
+    }, 0)
 
     const handleOpenMenu = () => {
         setIsOpen(prev => !prev)
@@ -29,8 +36,13 @@ const MobileHeader = () => {
                     <span className={styles.navicon}></span>
                 </label>
                 <Image className={styles.logo} src={Logo} alt='Plush octopus'/>
-                <Link className={styles.link} href='##'>
+                <Link className={`${styles.link} ${styles.basket}`} href='##'>
                     <Image className={styles.icon} src={Bag_icon} alt='bag icon'/>
+                    {productsCount > 0 && (
+                        <div className={styles.count}>
+                            <p>{productsCount}</p>
+                        </div>
+                    )}
                 </Link>
             </div>
             <nav className={menu}>
