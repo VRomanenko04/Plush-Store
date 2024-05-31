@@ -67,13 +67,12 @@
 
 .link_btn {
     border: 1px solid #4E9DD3;
-    padding: 15px 50px;
-    text-decoration: none;
     color: #000;
     font-size: 14px;
     font-weight: 500;
 }
 
+//Adaptive styles
 @media screen and (max-width: 780px) {
     .title {
         margin-top: 40px;
