@@ -8,6 +8,8 @@ import changelingCat from '@/assets/changeling_cat.jpg';
 import Bag_icon from '@/assets/icons/bag_icon.svg';
 import LinkButton from '@/components/ui/LinkButton/LinkButton';
 import OrderPopup from '@/components/ui/Popup/OrderPopup/OrderPopup';
+import { useDispatch } from 'react-redux';
+import { actions } from '@/redux/features/basket.slice';
 
 const offers = [
     {
@@ -29,11 +31,17 @@ const offers = [
 
 const HomePagePopular = () => {
     const [isItemChosen, setIsItemChosen] = useState(false);
-    const [getItemTitle, setGetItemTitle] = useState('');
+    const [getItemData, setGetItemData] = useState({
+        title: '',
+        price: ''
+    });
 
-    const handleItemChoose = (itemTitle: string) => {
+    const dispatch = useDispatch();
+
+    const handleItemChoose = (itemData: {title: string, price: string}) => {
         setIsItemChosen(prev => !prev);
-        setGetItemTitle(itemTitle);
+        setGetItemData(itemData);
+        dispatch(actions.addToBacket(itemData));
     }
 
     return (
@@ -47,7 +55,7 @@ const HomePagePopular = () => {
                             <h6>{offer.title}</h6>
                             <div className={styles.price_block}>
                                 <p className={styles.price}>{offer.price} грн</p>
-                                <div className={styles.btn} onClick={() => handleItemChoose(offer.title)}>
+                                <div className={styles.btn} onClick={() => handleItemChoose({title: offer.title, price: offer.price})}>
                                     <Image src={Bag_icon} alt='bag icon'/>
                                     <p>У корзину</p>
                                 </div>
@@ -60,7 +68,7 @@ const HomePagePopular = () => {
             <OrderPopup 
                 isOpen={isItemChosen}
                 setisOpen={setIsItemChosen}
-                itemTitle={getItemTitle}
+                itemTitle={getItemData.title}
             />
         </>
     )
