@@ -4,6 +4,7 @@ import "@/styles/globals.scss";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import MobileHeader from "@/components/Header/MobileHeader/MobileHeader";
+import StoreProvider from "./StoreProvider";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -18,13 +19,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ua">
-      <body className={montserrat.className}>
-        <Header />
-        <MobileHeader />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <StoreProvider>
+      <html lang="ua">
+        <body className={montserrat.className}>
+          <Header />
+          <MobileHeader />
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </StoreProvider>
   );
 }
