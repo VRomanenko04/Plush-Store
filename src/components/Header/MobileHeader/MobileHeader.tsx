@@ -19,7 +19,7 @@ const MobileHeader = () => {
         setIsOpen(prev => !prev)
     }
 
-    const menu = `${styles.dropdown_menu} ${isOpen ? styles.open : styles.close}`;
+    const menu = `${styles.dropdown_menu} ${isOpen && styles.open}`;
 
     return (
         <header className={styles.header}>
