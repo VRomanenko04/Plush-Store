@@ -36,7 +36,7 @@ const MobileHeader = () => {
                     <span className={styles.navicon}></span>
                 </label>
                 <Image className={styles.logo} src={Logo} alt='Plush octopus'/>
-                <Link className={`${styles.link} ${styles.basket}`} href='##'>
+                <Link className={`${styles.link} ${styles.basket}`} href='/basket'>
                     <Image className={styles.icon} src={Bag_icon} alt='bag icon'/>
                     {productsCount > 0 && (
                         <div className={styles.count}>

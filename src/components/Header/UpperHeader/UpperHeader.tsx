@@ -43,7 +43,7 @@ const UpperHeader = () => {
                         <a className={styles.link} href='tel:0662916690'><Image className={styles.icon} src={Phone_icon} alt='phone icon'/> 0662916690</a>
                     </li>
                     <li className={styles.list_item}>
-                        <Link className={`${styles.link} ${styles.basket}`} href='**'>
+                        <Link className={`${styles.link} ${styles.basket}`} href='/basket'>
                             <Image className={styles.icon} src={Bag_icon} alt='bag icon'/>
                             <p>Корзина</p>
                             {productsCount > 0 && (

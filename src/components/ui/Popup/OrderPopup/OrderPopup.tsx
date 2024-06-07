@@ -18,7 +18,7 @@ const OrderPopup = ({ isOpen, itemTitle, setisOpen}: Props) => {
                 <p>"{itemTitle}" додано до корзини</p>
                 <div className={styles.btns}>
                     <FunctionalButton editionalClass={styles.continue_btn} event={() => setisOpen(false)} btnText='Продовжити покупки'/>
-                    <LinkButton editionalClass={styles.order_btn} link='##' btnText='Оформити зараз'/>
+                    <LinkButton editionalClass={styles.order_btn} link='/basket' btnText='Оформити зараз'/>
                 </div>
             </div>
         </Popup>
