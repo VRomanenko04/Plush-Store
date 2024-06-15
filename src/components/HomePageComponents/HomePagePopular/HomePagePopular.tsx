@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import styles from './HomePagePopular.module.scss';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import hugCat from '@/assets/hug_cat.jpg';
 import rainbowOctopus from '@/assets/rainbow_octopus.jpg';
 import changelingCat from '@/assets/changeling_cat.jpg';
@@ -10,6 +10,12 @@ import LinkButton from '@/components/ui/LinkButton/LinkButton';
 import OrderPopup from '@/components/ui/Popup/OrderPopup/OrderPopup';
 import { useDispatch } from 'react-redux';
 import { actions } from '@/redux/features/basket.slice';
+
+type ProductTypes = {
+    title: string
+    price: string
+    image: StaticImageData
+}
 
 const offers = [
     {
@@ -31,14 +37,11 @@ const offers = [
 
 const HomePagePopular = () => {
     const [isItemChosen, setIsItemChosen] = useState(false);
-    const [getItemData, setGetItemData] = useState({
-        title: '',
-        price: ''
-    });
+    const [getItemData, setGetItemData] = useState<ProductTypes>();
 
     const dispatch = useDispatch();
 
-    const handleItemChoose = (itemData: {title: string, price: string}) => {
+    const handleItemChoose = (itemData: ProductTypes) => {
         setIsItemChosen(prev => !prev);
         setGetItemData(itemData);
         dispatch(actions.addToBacket(itemData));
@@ -55,7 +58,7 @@ const HomePagePopular = () => {
                             <h6>{offer.title}</h6>
                             <div className={styles.price_block}>
                                 <p className={styles.price}>{offer.price} грн</p>
-                                <div className={styles.btn} onClick={() => handleItemChoose({title: offer.title, price: offer.price})}>
+                                <div className={styles.btn} onClick={() => handleItemChoose({title: offer.title, price: offer.price, image: offer.image})}>
                                     <Image src={Bag_icon} alt='bag icon'/>
                                     <p>У корзину</p>
                                 </div>
@@ -68,7 +71,7 @@ const HomePagePopular = () => {
             <OrderPopup 
                 isOpen={isItemChosen}
                 setisOpen={setIsItemChosen}
-                itemTitle={getItemData.title}
+                itemTitle={getItemData ? getItemData.title : 'Помилка'}
             />
         </>
     )
