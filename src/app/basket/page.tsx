@@ -4,6 +4,7 @@ import styles from './BasketPage.module.scss';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
 import Link from 'next/link';
+import BasketPageList from '@/components/BasketPageComponents/BasketPageList/BasketPageList';
 
 
 const BasketPage = () => {
@@ -38,15 +39,17 @@ const BasketPage = () => {
                     </span>
                 )}
             </p>
+            {productsCount > 0 &&
             <div>
                 <div>
-                    {/* List Component */}
+                    <BasketPageList productsPrice={productsPrice} productsList={productsList}/>
                     {/* Delivery component */}
                 </div>
                 <div>
                     {/* Price checkout component */}
                 </div>
             </div>
+            }
             {/* Propositions Component */}
         </main>
     )
