@@ -1,9 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { StaticImageData } from "next/image";
 
-type Order = {
+export type Order = {
     title: string
     price: string
     count: number
+    image: StaticImageData
 }
 
 const initialState: Order[] = [];
